@@ -1,0 +1,27 @@
+{
+  "entities": {
+    "Registration": {
+      "title": "Alumni Registration",
+      "description": "Details of an alumni registration for the reunion.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "Full name of the alumni" },
+        "email": { "type": "string", "format": "email", "description": "Email address" },
+        "phone": { "type": "string", "description": "Phone number" },
+        "batch": { "type": "string", "description": "Graduation batch year" },
+        "amount": { "type": "number", "description": "Registration fee paid" },
+        "foodReceived": { "type": "boolean", "description": "Whether the food coupon has been redeemed" },
+        "receivedAt": { "type": "string", "format": "date-time", "description": "Timestamp when food was received" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "Registration timestamp" },
+        "updatedAt": { "type": "string", "format": "date-time", "description": "Last update timestamp" }
+      },
+      "required": ["name", "email", "phone", "batch", "amount"]
+    }
+  },
+  "firestore": {
+    "/registrations/{registrationId}": {
+      "schema": "Registration",
+      "description": "Collection of all alumni registrations"
+    }
+  }
+}

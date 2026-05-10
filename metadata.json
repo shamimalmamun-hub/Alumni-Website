@@ -1,0 +1,8 @@
+{
+  "name": "Alumni Reunion Pro | প্রাক্তন শিক্ষার্থী পুনর্মিলনী",
+  "description": "A comprehensive system for alumni reunion registration, QR code based attendance tracking, and food distribution management.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": []
+}
